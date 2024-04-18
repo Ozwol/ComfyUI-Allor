@@ -26,10 +26,7 @@ if [ -d "../../venv" ]; then
       exit 1
     fi
 elif command -v python3 &> /dev/null; then
-    printf "\e[34m[Allor]\e[0m: Only the system Python environment is detected. Should this be used for Allor dependencies? (y/N): "
-    read answer
-
-    [[ $answer =~ ^[yY] ]] || echo -e "\e[31m[Allor]\e[0m: None of the Python environments were found." && exit 1
+    printf "\e[34m[Allor]\e[0m: Only the system Python environment is detected" 
 else
     echo -e "\e[31m[Allor]\e[0m: None of the Python environments were found."
     exit 1
